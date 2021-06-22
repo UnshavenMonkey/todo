@@ -1,0 +1,24 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block taskList %}
+    
+    <form method="POST" action="" class="row">
+        {% csrf_token %}
+        <div class="col">
+            <label for="exampleInputEmail1" class="form-label">Input task</label>
+            <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Choose category</div>
+        </div>
+        <select class="form-select" name="cat.category_name" aria-label="Default select example">
+            <option selected>{{ category_list.0.category_name }}</option>
+            {% for cat in category_list %}
+                {% if cat.category_name != category_list.0.category_name %}
+                <option value="{{ cat.category_name }}">{{ cat.category_name }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-primary col-2 my-3">Submit</button>
+    </form>
+{% endblock %}

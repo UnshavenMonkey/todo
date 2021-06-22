@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+
+{% block taskList %}
+    
+    <form method="POST" action="" class="row add-cat-form">
+        {% csrf_token %}
+        <div class="col">
+            <label for="exampleInputEmail1" class="form-label">Input category</label>
+            <input type="text" name="categoryname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary col-2 my-3">Submit</button>
+    </form>
+{% endblock %}

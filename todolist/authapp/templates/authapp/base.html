@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Bootstrap JS + Popper JS -->
+    <script defer src="{% static 'bootstrap.bundle.min.js' %}"></script>
+    <title>ToDo</title>
+</head>
+<body>
+    <div class="container-xl">
+        <header class="header">
+            <div class="row">
+                <div class="col">
+                    <span class="header_text">ToDo List</span>
+                    <span class="header_text">Nothing is real if you don't believe in who you are</span>
+                </div>
+            </div>
+        </header>
+        <main class="write_wrap">
+            {% block taskList %}
+            {% endblock %}
+        </main>
+        <footer class="footer">
+            <div class="row">
+                <div class="col">
+                    <span class="header_text">ToDo List</span>
+                    <span class="header_text">Nothing is real if you don't believe in who you are</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

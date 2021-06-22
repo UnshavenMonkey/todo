@@ -1,0 +1,14 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block taskList %}
+    <div class="row justify-content-center">
+        <div class="col add_form_wrap">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Add Task">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,159 @@
+html, body {
+    height: 100%;
+}
+
+.container-xl {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #3DADFA;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.header_text {
+    display: block;
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+
+.login-link {
+    text-decoration: none;
+    color: black;
+    background-color: #3DADFA;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    padding: 0.25em 1em;
+}
+
+.login-link:hover {
+    border: 2px solid gray;
+    color: gray;
+}
+
+.btn-lg {
+    display: block;
+    margin: 30px auto;
+}
+
+.done-link {
+    text-decoration: none;
+}
+
+.write_wrap {
+    flex-grow: 2;
+    padding: 0 2%;
+}
+
+.cat_blue {
+    
+    border-image: linear-gradient(to right, #0d6efd -19%, white 56%);
+    border-image-slice: 11;
+    padding: 20px 0 20px 10px;
+}
+
+.cat_blue_right {
+    display: flex;
+    border-image: linear-gradient(to left, #0d6efd -19%, white 100%);
+    border-image-slice: 11;
+    padding: 20px 10px 20px 0;
+    justify-content: center;
+}
+
+.cat_fiol {
+    border-top: 1px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, violet -19%, white 56%);
+    border-image-slice: 11;
+    padding: 20px 0 20px 10px;
+}
+
+.cat_fiol_right {
+    display: flex;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-image: linear-gradient(to left, violet -5%, white 11%);
+    border-image-slice: 11;
+    padding: 20px 10px 20px 0;
+    justify-content: center;
+}
+
+.cat_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.nav-cat-item {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-cat-item:hover {
+    background-color: #3DADFA;
+}
+
+.nav-cat-item:active {
+    background-color: #3DADFA;
+}
+
+.cat-add-link {
+    text-decoration: none;
+}
+
+.add-cat-form {
+    display: block;
+}
+
+.footer {
+    background-color: #3DADFA;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer_info {
+    font-size: 10px;
+    margin-top: 1%;
+}
+
+.add_form_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-cat {
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .nav-cat {
+        flex-direction: row;
+    }
+
+    .cat-add-link {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .cat_wrap {
+        display: none;
+    }
+}
+
